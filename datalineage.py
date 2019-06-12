@@ -38,6 +38,11 @@ class DataTracker:
             
 
             shutil.copy2(filename, cwd + "/" + foldername + "/" + newname)
+        
+        import datetime
+        datestamp = str(datetime.datetime.now()).replace(" ", "_")
+        with open(cwd + "/" + foldername + "/" + datestamp + ".txt", "w+") as f:
+            f.write(datestamp)
 
         return self.ID
 
