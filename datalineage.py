@@ -44,7 +44,7 @@ class DataTracker:
         with open(cwd + "/" + foldername + "/" + datestamp + ".txt", "w+") as f:
             f.write(datestamp)
 
-        return self.ID
+        return foldername
 
     def genid(self):
         import uuid
